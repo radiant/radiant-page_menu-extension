@@ -1,3 +1,3 @@
-# Page Types
+# Page Menu
 
-Adds a page-type select menu to the Pages#index view.
+Adds a page class select menu to the Pages index.

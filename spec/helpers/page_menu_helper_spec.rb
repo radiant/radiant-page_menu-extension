@@ -1,10 +1,10 @@
 require File.dirname(__FILE__) + "/../spec_helper"
 
-describe PageTypesExtension::PageTypesHelper do
+describe PageMenuExtension::PageMenuHelper do
   dataset :home_page
   attr_reader :current_user
   include ApplicationHelper
-  include PageTypesExtension::PageTypesHelper
+  include PageMenuExtension::PageMenuHelper
 
   before do
     @page = pages(:home)

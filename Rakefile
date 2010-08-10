@@ -1,16 +1,16 @@
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "radiant-page_types-extension"
-    gem.summary = %Q{Page Types Extension for Radiant CMS}
-    gem.description = %Q{Adds a page-type select dropdown to the Pages index view}
+    gem.name = "radiant-page_menu-extension"
+    gem.summary = %Q{Page Menu Extension for Radiant CMS}
+    gem.description = %Q{Adds a page class select menu to the Pages index}
     gem.email = "josh@vitamin-j.com"
     gem.homepage = "http://github.com/radiant/radiant"
     gem.authors = ["Josh French"]
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
 rescue LoadError
-  puts "Jeweler (or a dependency) not available. This is only required if you plan to package page_types as a gem."
+  puts "Jeweler (or a dependency) not available. This is only required if you plan to package page_menu as a gem."
 end
 
 # In rails 1.2, plugins aren't available in the path until they're loaded.
@@ -115,7 +115,7 @@ namespace :spec do
   end
 end
 
-desc 'Generate documentation for the page_types extension.'
+desc 'Generate documentation for the page_menu extension.'
 Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title    = 'PageTypesExtension'
@@ -125,7 +125,7 @@ Rake::RDocTask.new(:rdoc) do |rdoc|
 end
 
 # For extensions that are in transition
-desc 'Test the page_types extension.'
+desc 'Test the page_menu extension.'
 Rake::TestTask.new(:test) do |t|
   t.libs << 'lib'
   t.pattern = 'test/**/*_test.rb'

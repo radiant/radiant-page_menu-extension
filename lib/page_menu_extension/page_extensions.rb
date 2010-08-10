@@ -1,4 +1,4 @@
-module PageTypesExtension::PageExtensions
+module PageMenuExtension::PageExtensions
   def default_child
     Page
   end

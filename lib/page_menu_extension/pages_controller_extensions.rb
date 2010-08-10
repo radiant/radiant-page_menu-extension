@@ -1,4 +1,4 @@
-module PageTypesExtension::PagesControllerExtensions
+module PageMenuExtension::PagesControllerExtensions
   def self.included(base)
     base.class_eval do
       responses.new.default do

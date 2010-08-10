@@ -1,4 +1,4 @@
-module PageTypesHelper
+module PageMenuHelper
   def self.included(base)
     base.alias_method_chain :children_for, :roles
   end
