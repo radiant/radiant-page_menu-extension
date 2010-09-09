@@ -9,5 +9,6 @@ class PageMenuExtension < Radiant::Extension
     Admin::PagesController.send :include, PagesControllerExtensions
     Admin::PagesController.helper :page_menu
     Page.send :include, PageExtensions
+    admin.page.edit.layout.delete 'edit_type'
   end
 end
