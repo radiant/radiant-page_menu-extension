@@ -1,7 +1,7 @@
 require_dependency 'application_controller'
 
 class PageMenuExtension < Radiant::Extension
-  version "0.1"
+  version "0.2"
   description "Adds a page-type select menu"
   url "http://github.com/radiant/radiant"
   
