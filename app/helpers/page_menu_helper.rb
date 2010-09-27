@@ -24,7 +24,7 @@ module PageMenuHelper
         if child == :separator
           content_tag :li, nil, :class => 'separator'
         else
-          content_tag :li, link_to(name_for[child], new_admin_page_child_path(page, :page_class => child))
+          content_tag :li, link_to(name_for[child], new_admin_page_child_path(page, :page_class => child), :title => clean_page_description(child))
         end
       end
     end
@@ -38,5 +38,9 @@ module PageMenuHelper
     children = children_for_without_roles(page)
     children.reject! { |p| p.new.virtual? } unless admin?
     children
+  end
+  
+  def clean_page_description(page)
+    page.description.to_s.strip.gsub(/\t/,'').gsub(/\s+/,' ')
   end
 end

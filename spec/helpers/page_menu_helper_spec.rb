@@ -6,8 +6,8 @@ describe PageMenuExtension::PageMenuHelper do
   include ApplicationHelper
   include PageMenuExtension::PageMenuHelper
 
+  let(:page){ pages(:home) }
   before do
-    @page = pages(:home)
     @current_user = stub(:admin? => true)
   end
 
@@ -33,6 +33,16 @@ describe PageMenuExtension::PageMenuHelper do
       @page.stub!(:allowed_children).and_return([Page, ArchivePage, FileNotFoundPage])
       current_user.stub!(:admin?).and_return(false)
       children_for(@page).flatten.should_not include(FileNotFoundPage)
+    end
+  end
+  
+  describe '#clean_page_description' do
+    it "should remove all whitespace (except single spaces) from the given page's description" do
+      @page.stub!(:description).and_return(%{
+        This is the  description   for the   
+            current page!
+      })
+      clean_page_description(@page).should == 'This is the description for the current page!'
     end
   end
 end
