@@ -1,5 +1,5 @@
 ---
 en:
-  edit_page : 'Edit {{class}}'
-  new_page : 'New {{class}}'
+  edit_page : 'Edit %{class}'
+  new_page : 'New %{class}'
   normal_page: 'Normal Page'
